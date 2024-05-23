@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Saira", sans-serif;
+	font-optical-sizing: auto;
+	font-variation-settings: "wdth" 100;
+}
