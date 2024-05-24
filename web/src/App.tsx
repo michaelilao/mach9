@@ -1,10 +1,19 @@
 import "./App.css";
-
+import SideMenu from "./components/SideMenu";
+import Map from "./components/Map";
 function App() {
 	return (
-		<>
-			<div className="text-3xl text-primary">About Shark 600</div>
-		</>
+		<div>
+			<div className="border-b p-2">Header</div>
+			<div className="flex h-screen">
+				<div className="w-1/3 h-full border-r p-2">
+					<SideMenu />
+				</div>
+				<div className="w-2/3 p-2">
+					<Map />
+				</div>
+			</div>
+		</div>
 	);
 }
 
