@@ -4,6 +4,7 @@ import Input from "../components/Input";
 import { usePrebuildOptions } from "../store/prebuild";
 import { measurements } from "../options/prebuild";
 import { mapKeys } from "../utils";
+import { WrenchIcon } from "@heroicons/react/20/solid";
 export default function PreBuild() {
 	const { currency, exchangeRates, currentRate, setOption, unit } =
 		usePrebuildOptions((state) => state);
@@ -25,7 +26,11 @@ export default function PreBuild() {
 
 	return (
 		<div className="">
-			<Accordion title="Pre Build" defaultOpen>
+			<Accordion
+				title="Pre Build"
+				defaultOpen
+				icon={<WrenchIcon className="size-5 my-auto text-primary" />}
+			>
 				<div className="flex flex-col space-y-2">
 					<Select
 						label="Currency"

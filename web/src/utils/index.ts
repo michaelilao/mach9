@@ -1,4 +1,4 @@
-const mapEntries = (obj: Object) => {
+const mapEntries = (obj: object) => {
 	return Object.entries(obj).map(([key, value]) => {
 		return {
 			id: value,
@@ -7,7 +7,7 @@ const mapEntries = (obj: Object) => {
 	});
 };
 
-const mapKeys = (obj: Object) => {
+const mapKeys = (obj: object) => {
 	return Object.keys(obj).map((key) => {
 		return {
 			id: key,
@@ -16,4 +16,9 @@ const mapKeys = (obj: Object) => {
 	});
 };
 
-export { mapEntries, mapKeys };
+const milesToMeters = (miles: number) => {
+	if (!miles) return 0;
+	const metersPerMile = 1609.34;
+	return miles * metersPerMile;
+};
+export { mapEntries, mapKeys, milesToMeters };

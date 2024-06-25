@@ -21,6 +21,7 @@ import {
 	ledNAVStrobe,
 	landingLight,
 } from "../../options/mainbuild";
+import { PaperAirplaneIcon } from "@heroicons/react/20/solid";
 import { mapEntries } from "../../utils";
 import _ from "lodash";
 
@@ -104,7 +105,10 @@ export default function MainBuild() {
 
 	return (
 		<div>
-			<Accordion title="Main Build">
+			<Accordion
+				title="Main Build"
+				icon={<PaperAirplaneIcon className="size-5 my-auto text-primary" />}
+			>
 				<div className="flex flex-col space-y-2">
 					{genericFields?.map((field) => {
 						let options = field.options;

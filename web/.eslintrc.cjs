@@ -1,3 +1,4 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -10,9 +11,11 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
+    'react-hooks/exhaustive-deps': "off",
+    '@typescript-eslint/no-explicit-any': 0,
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
-  },
+  }
 }

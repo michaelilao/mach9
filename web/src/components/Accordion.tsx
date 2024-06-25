@@ -5,9 +5,10 @@ type Props = {
 	title: string;
 	children?: React.ReactNode;
 	defaultOpen?: boolean;
+	icon?: React.ReactNode;
 };
 
-const Accordion = ({ title, children, defaultOpen = false }: Props) => {
+const Accordion = ({ title, children, defaultOpen = false, icon }: Props) => {
 	const [isOpen, setIsOpen] = useState(defaultOpen);
 
 	return (
@@ -16,7 +17,10 @@ const Accordion = ({ title, children, defaultOpen = false }: Props) => {
 				className="w-full flex justify-between items-center p-1 focus:outline-none"
 				onClick={() => setIsOpen(!isOpen)}
 			>
-				<span className="text-xl font-medium text-primary py-1">{title}</span>
+				<div className="flex ">
+					<div className="my-auto mr-2">{icon}</div>
+					<span className="text-xl font-medium text-primary py-1">{title}</span>
+				</div>
 				<div
 					className={`w-10 h-10 transform transition-transform duration-400 cursor-pointer ${
 						isOpen ? "rotate-180" : ""

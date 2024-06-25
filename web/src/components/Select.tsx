@@ -1,6 +1,6 @@
 type Props = {
 	label: string;
-	placeholder: string;
+	placeholder?: string;
 	value: string;
 	onChange: (event: ChangeEvent) => void;
 	options: {
@@ -26,7 +26,7 @@ export default function Select({
 				value={value}
 				className="border border-gray-300 text-sm rounded-lg w-full p-2 focus:ring-secondary focus:border-secondary bg-white"
 			>
-				<option>{placeholder}</option>
+				{placeholder !== undefined ? <option>{placeholder}</option> : null}
 				{options.map((option) => {
 					return (
 						<option key={option.id} value={option.id}>

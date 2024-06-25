@@ -10,6 +10,7 @@ import {
 	throttleNonStandard,
 } from "../../options/appearancebuild";
 import { mapEntries } from "../../utils";
+import { PaintBrushIcon } from "@heroicons/react/20/solid";
 import _ from "lodash";
 import Input from "../../components/Input";
 
@@ -61,7 +62,10 @@ export default function AppearanceBuild() {
 
 	return (
 		<div>
-			<Accordion title="Appearance">
+			<Accordion
+				title="Appearance"
+				icon={<PaintBrushIcon className="size-5 my-auto text-primary" />}
+			>
 				<div className="flex flex-col space-y-2">
 					{genericFields?.map((field) => {
 						let options = field.options;

@@ -8,6 +8,7 @@ import {
 	cover,
 	beringerTireChangeTool,
 } from "../../options/miscbuild";
+import { AdjustmentsHorizontalIcon } from "@heroicons/react/20/solid";
 import { mapEntries } from "../../utils";
 import _ from "lodash";
 import { useMiscBuild } from "../../store/miscbuild";
@@ -57,7 +58,12 @@ export default function MiscBuild() {
 
 	return (
 		<div>
-			<Accordion title="Miscellaneous">
+			<Accordion
+				title="Miscellaneous"
+				icon={
+					<AdjustmentsHorizontalIcon className="size-5 my-auto text-primary" />
+				}
+			>
 				<div className="flex flex-col space-y-2">
 					{genericFields?.map((field) => {
 						let options = field.options;

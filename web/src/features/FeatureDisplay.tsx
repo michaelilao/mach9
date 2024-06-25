@@ -1,5 +1,6 @@
 import Map from "./Map";
 import Avionics from "./Avionics";
+import Report from "./Report";
 import { useMainBuildOptions, MainBuildState } from "../store/mainbuild";
 import { useEffect, useState } from "react";
 import usePrevious from "../hooks/usePrevious";
@@ -7,6 +8,7 @@ import usePrevious from "../hooks/usePrevious";
 const tabs = {
 	map: "Map",
 	avionics: "Avionics",
+	// report: "Report",
 };
 
 export default function FeatureDisplay() {
@@ -61,6 +63,9 @@ export default function FeatureDisplay() {
 				<div className={currentTab === "avionics" ? "" : "hidden"}>
 					<Avionics />
 				</div>
+				{/* <div className={currentTab === "report" ? "" : "hidden"}>
+					<Report />
+				</div> */}
 			</div>
 		</div>
 	);
