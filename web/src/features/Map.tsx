@@ -12,6 +12,19 @@ import { useMainBuildOptions } from "../store/mainbuild";
 import { milesToMeters, mapEntries } from "../utils";
 import Select from "../components/Select";
 
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+
+import icon from "leaflet/dist/images/marker-icon.png";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
+
+const DefaultIcon = L.icon({
+	iconUrl: icon,
+	shadowUrl: iconShadow,
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
+
 const markers = [
 	{ position: [43.65107, -79.347015], name: "Toronto", id: "toronto" },
 	{ position: [40.712776, -74.005974], name: "New York", id: "new_york" },
